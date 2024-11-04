@@ -69,20 +69,47 @@ public class ExamenAutomaticoPersonalizado {
                         } else {
                             contadorPuntos = contadorPuntos - 0.5;
                         }
-                        System.out.println("Has obtenido " + contadorPuntos + " puntos");
+                        System.out.println("Tienes " + contadorPuntos + " puntos");
                     }
+                    contadorPuntos = 0;
+                    System.out.println("Test Terminado.");
+
                 } else if (seleccionNivelDificultad == DIFICULTAD_MEDIA) {
+                    for(numeroPreguntas = 1; numeroPreguntas <= 5; numeroPreguntas++ ){
+                        variableMultiplicacion = (int) (Math.random() * LIMITE_SUPERIOR_DIFICULTAD_MEDIA - LIMITE_INFERIOR_DIFICULTAD_MEDIA + 1) + LIMITE_INFERIOR_DIFICULTAD_MEDIA;
+                        System.out.println(seleccionPrimerFactor + "x" + variableMultiplicacion);
+                        respuestaUsuario = scanner.nextInt();
+                        if (respuestaUsuario == (seleccionPrimerFactor*variableMultiplicacion)) {
+                            contadorPuntos = contadorPuntos + 2;
+                        } else {
+                            contadorPuntos = contadorPuntos - 0.5;
+                        }
+                        System.out.println("Tienes " + contadorPuntos + " puntos");
+                    }
+                    contadorPuntos = 0;
+                    System.out.println("Test Terminado.");
 
                 } else if (seleccionNivelDificultad == DIFICULTAD_ALTA) {
+                    for(numeroPreguntas = 1; numeroPreguntas <= 5; numeroPreguntas++ ){
+                        variableMultiplicacion = (int) (Math.random() * LIMITE_SUPERIOR_DIFICULTAD_ALTA - LIMITE_INFERIOR_DIFICULTAD_ALTA + 1) + LIMITE_INFERIOR_DIFICULTAD_ALTA;
+                        System.out.println(seleccionPrimerFactor + "x" + variableMultiplicacion);
+                        respuestaUsuario = scanner.nextInt();
+                        if (respuestaUsuario == (seleccionPrimerFactor*variableMultiplicacion)) {
+                            contadorPuntos = contadorPuntos + 2;
+                        } else {
+                            contadorPuntos = contadorPuntos - 0.5;
+                        }
+                        System.out.println("Tienes " + contadorPuntos + " puntos");
+                    }
+                    contadorPuntos = 0;
+                    System.out.println("Test Terminado.");
 
                 }
-
             } else if (seleccionUsuarioMenuPrincipal == 3) {
                 System.out.println("Saliendo del programa...");
             } else {
                 System.out.println("Selecciona una opcion valida");
             }
-
         } while (seleccionUsuarioMenuPrincipal != 3);
 
         scanner.close();
