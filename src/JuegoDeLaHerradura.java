@@ -1,6 +1,6 @@
 public class JuegoDeLaHerradura {
     public static void main(String[] args) {
-        
+
         int puntosTotalesArmand = 0;
         int puntosTotalesNaneh = 0;
         final int PUNTOS_SI_EMPATAN = 1;
@@ -16,10 +16,10 @@ public class JuegoDeLaHerradura {
 
             double tiradaDeArmand = Math.random();
             double tiradaDeNaneh = Math.random();
-            
+
             int puntosRondaArmand = procesarTiradaArmand(tiradaDeArmand);
             int puntosRondaNaneh = procesarTiradaNaneh(tiradaDeNaneh);
-            
+
             empataron = procesarEmpate(puntosRondaArmand, puntosRondaNaneh);
             if (empataron) {
                 puntosRondaArmand = PUNTOS_SI_EMPATAN;
@@ -43,7 +43,7 @@ public class JuegoDeLaHerradura {
         }
     }
 
-    private static int procesarTiradaArmand (double tiradaDeArmand){
+    private static int procesarTiradaArmand(double tiradaDeArmand) {
         int puntosArmand = 0;
         final double INTERBALO_INFERIOR_ACERTAR = 0;
         final double INTERBALO_SUPERIOR_ACERTAR = 0.1;
@@ -55,17 +55,17 @@ public class JuegoDeLaHerradura {
         if (tiradaDeArmand <= INTERBALO_SUPERIOR_ACERTAR && tiradaDeArmand >= INTERBALO_INFERIOR_ACERTAR) {
             System.out.println("Armand ACERTO!");
             puntosArmand = 5;
-        }else if (tiradaDeArmand <= INTERBALO_SUPERIOR_CERCA && tiradaDeArmand > INTERBALO_INFERIOR_CERCA) {
+        } else if (tiradaDeArmand <= INTERBALO_SUPERIOR_CERCA && tiradaDeArmand > INTERBALO_INFERIOR_CERCA) {
             System.out.println("Armand estuvo CERCA!");
             puntosArmand = 3;
         } else if (tiradaDeArmand <= INTERBALO_SUPERIOR_LEJOS && tiradaDeArmand > INTERBALO_INFERIOR_LEJOS) {
             System.out.println("Armand estuvo LEJOS!");
             puntosArmand = 1;
         }
-        return(puntosArmand);
+        return (puntosArmand);
     }
 
-    private static int procesarTiradaNaneh (double tiradaDeNaneh){
+    private static int procesarTiradaNaneh(double tiradaDeNaneh) {
         int puntosNaneh = 0;
         final double INTERBALO_INFERIOR_ACERTAR = 0;
         final double INTERBALO_SUPERIOR_ACERTAR = 0.1;
@@ -77,7 +77,7 @@ public class JuegoDeLaHerradura {
         if (tiradaDeNaneh <= INTERBALO_SUPERIOR_ACERTAR && tiradaDeNaneh >= INTERBALO_INFERIOR_ACERTAR) {
             System.out.println("Naneh ACERTO!");
             puntosNaneh = 5;
-        }else if (tiradaDeNaneh <= INTERBALO_SUPERIOR_CERCA && tiradaDeNaneh > INTERBALO_INFERIOR_CERCA) {
+        } else if (tiradaDeNaneh <= INTERBALO_SUPERIOR_CERCA && tiradaDeNaneh > INTERBALO_INFERIOR_CERCA) {
             System.out.println("Naneh estuvo CERCA!");
             puntosNaneh = 3;
         } else if (tiradaDeNaneh <= INTERBALO_SUPERIOR_LEJOS && tiradaDeNaneh > INTERBALO_INFERIOR_LEJOS) {
@@ -87,15 +87,16 @@ public class JuegoDeLaHerradura {
         return (puntosNaneh);
     }
 
-    private static boolean procesarEmpate (int puntosRondaArmand, int puntosRondaNaneh){
+    private static boolean procesarEmpate(int puntosRondaArmand, int puntosRondaNaneh) {
         boolean empataron = false;
         if (puntosRondaArmand == puntosRondaNaneh) {
             empataron = true;
-        } 
-        return(empataron);
+        }
+        return (empataron);
     }
 
-    private static void imprimirPuntos(int puntosRondaArmand, int puntosTotalesArmand, int puntosRondaNaneh, int puntosTotalesNaneh){
+    private static void imprimirPuntos(int puntosRondaArmand, int puntosTotalesArmand, int puntosRondaNaneh,
+            int puntosTotalesNaneh) {
         System.out.println();
         System.out.println("Armand, esta ronda hizo [" + puntosRondaArmand + "] puntos");
         System.out.println("Naneh, esta ronda hizo [" + puntosRondaNaneh + "] puntos");
@@ -105,5 +106,3 @@ public class JuegoDeLaHerradura {
     }
 
 }
-
-
