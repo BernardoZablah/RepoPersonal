@@ -57,14 +57,14 @@ public class ExamenAutomaticoPersonalizado {
 
                 System.out.println("Configuracion aplicada correctamente.");
 
-
             } else if (seleccionUsuarioMenuPrincipal == 2) {
                 if (seleccionNivelDificultad == DIFICULTAD_FACIL) {
-                    for(numeroPreguntas = 1; numeroPreguntas <= 5; numeroPreguntas++ ){
-                        variableMultiplicacion = (int) (Math.random() * LIMITE_SPUERIOR_DIFICULTAD_FACIL - LIMITE_INFERIOR_DIFICULTAD_FACIL + 1) + LIMITE_INFERIOR_DIFICULTAD_FACIL;
+                    for (numeroPreguntas = 1; numeroPreguntas <= 5; numeroPreguntas++) {
+                        variableMultiplicacion = (int) (Math.random() * LIMITE_SPUERIOR_DIFICULTAD_FACIL
+                                - LIMITE_INFERIOR_DIFICULTAD_FACIL + 1) + LIMITE_INFERIOR_DIFICULTAD_FACIL;
                         System.out.println(seleccionPrimerFactor + "x" + variableMultiplicacion);
                         respuestaUsuario = scanner.nextInt();
-                        if (respuestaUsuario == (seleccionPrimerFactor*variableMultiplicacion)) {
+                        if (respuestaUsuario == (seleccionPrimerFactor * variableMultiplicacion)) {
                             contadorPuntos = contadorPuntos + 2;
                         } else {
                             contadorPuntos = contadorPuntos - 0.5;
@@ -75,11 +75,12 @@ public class ExamenAutomaticoPersonalizado {
                     System.out.println("Test Terminado.");
 
                 } else if (seleccionNivelDificultad == DIFICULTAD_MEDIA) {
-                    for(numeroPreguntas = 1; numeroPreguntas <= 5; numeroPreguntas++ ){
-                        variableMultiplicacion = (int) (Math.random() * LIMITE_SUPERIOR_DIFICULTAD_MEDIA - LIMITE_INFERIOR_DIFICULTAD_MEDIA + 1) + LIMITE_INFERIOR_DIFICULTAD_MEDIA;
+                    for (numeroPreguntas = 1; numeroPreguntas <= 5; numeroPreguntas++) {
+                        variableMultiplicacion = (int) (Math.random() * LIMITE_SUPERIOR_DIFICULTAD_MEDIA
+                                - LIMITE_INFERIOR_DIFICULTAD_MEDIA + 1) + LIMITE_INFERIOR_DIFICULTAD_MEDIA;
                         System.out.println(seleccionPrimerFactor + "x" + variableMultiplicacion);
                         respuestaUsuario = scanner.nextInt();
-                        if (respuestaUsuario == (seleccionPrimerFactor*variableMultiplicacion)) {
+                        if (respuestaUsuario == (seleccionPrimerFactor * variableMultiplicacion)) {
                             contadorPuntos = contadorPuntos + 2;
                         } else {
                             contadorPuntos = contadorPuntos - 0.5;
@@ -90,11 +91,12 @@ public class ExamenAutomaticoPersonalizado {
                     System.out.println("Test Terminado.");
 
                 } else if (seleccionNivelDificultad == DIFICULTAD_ALTA) {
-                    for(numeroPreguntas = 1; numeroPreguntas <= 5; numeroPreguntas++ ){
-                        variableMultiplicacion = (int) (Math.random() * LIMITE_SUPERIOR_DIFICULTAD_ALTA - LIMITE_INFERIOR_DIFICULTAD_ALTA + 1) + LIMITE_INFERIOR_DIFICULTAD_ALTA;
+                    for (numeroPreguntas = 1; numeroPreguntas <= 5; numeroPreguntas++) {
+                        variableMultiplicacion = (int) (Math.random() * LIMITE_SUPERIOR_DIFICULTAD_ALTA
+                                - LIMITE_INFERIOR_DIFICULTAD_ALTA + 1) + LIMITE_INFERIOR_DIFICULTAD_ALTA;
                         System.out.println(seleccionPrimerFactor + "x" + variableMultiplicacion);
                         respuestaUsuario = scanner.nextInt();
-                        if (respuestaUsuario == (seleccionPrimerFactor*variableMultiplicacion)) {
+                        if (respuestaUsuario == (seleccionPrimerFactor * variableMultiplicacion)) {
                             contadorPuntos = contadorPuntos + 2;
                         } else {
                             contadorPuntos = contadorPuntos - 0.5;
