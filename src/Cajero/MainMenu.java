@@ -21,7 +21,7 @@ public class MainMenu {
         while (!salir) {
             acciones.mostrar();
             int opcion = scanner.nextInt();
-
+            
             salir = acciones.ejecutar(opcion, cuentaBancaria);
         }
 
