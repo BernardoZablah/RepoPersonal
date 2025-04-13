@@ -9,7 +9,7 @@ public class MainMenu {
     private Acciones acciones;
 
     public MainMenu() {
-        cliente = new Cliente();
+        cliente = new Cliente(null, null);
         cuentaBancaria = new CuentaBancaria(cliente);
         acciones = new Acciones();
     }
