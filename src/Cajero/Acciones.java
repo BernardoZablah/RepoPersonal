@@ -14,9 +14,9 @@ public class Acciones {
     }
 
     public boolean ejecutar(int opcion, CuentaBancaria cuentaBancaria) {
-         Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
-         if (opcion == 1) {
+        if (opcion == 1) {
             System.out.println("Saldo actual: $" + cuentaBancaria.getSaldo());
         } else if (opcion == 2) {
             System.out.print("Monto a depositar: ");
